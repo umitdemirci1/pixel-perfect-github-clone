@@ -7,24 +7,28 @@ import { IoMdArrowDropdown } from 'react-icons/io'
 const Navbar = () => {
     return (
         <>
-            <div className="flex flex-row w-full h-[60px] items-center bg-navbar-background-color px-8 py-4">
-                <div className="flex flex-row items-center text-navbar-text-color mr-4">
+            <div className="flex flex-row w-full h-[60px] justify-between items-center bg-navbar-background-color px-4 md:px-6 lg:px-8 py-4 flex-nowrap">
+                <div className="flex flex-row items-center text-navbar-text-color mr-4 w-[416px]">
                     <NavLink to="/" className="mr-4"><GithubIcon /></NavLink>
-                    <label className="
-                    w-[272px] h-7 border border-navbar-input-border-color 
-                    rounded-md bg-navbar-input-bg-color flex flex-row 
-                    justify-between items-center">
+                    <span className="
+                    h-7 border border-navbar-input-border-color 
+                    rounded-md bg-navbar-input-bg-color flex 
+                    justify-between items-center lg:min-w-[272px] min-w-[120px] w-full">
                         <input className="
+                        min-w-[160px] w-full
                         bg-navbar-input-bg-color rounded-lg 
                         placeholder-gray-300 text-sm h-full
                         outline-none px-3"
                             type="text" placeholder="Search or jump to..." />
-                        <NavbarSeacrhIcon className="mr-[2px]" />
-                    </label>
+                        <NavbarSeacrhIcon className="mr-1" />
+                    </span>
+
                 </div>
-                <div className="flex flex-row justify-between w-full mt-[2px]">
+                <div className="flex flex-row w-full justify-between">
                     <div className="text-navbar-text-color text-sm font-semibold">
-                        <NavLink to="/" className="mr-4">Pull requests</NavLink>
+                        <NavLink to="/" className="mr-4 ">Pull 
+                        <span className="860 hidden lg:inline"> request</span>s</NavLink>
+
                         <NavLink to="/" className="mr-4">Issues</NavLink>
                         <NavLink to="/" className="mr-4">Codespaces</NavLink>
                         <NavLink to="/" className="mr-4">Marketplace</NavLink>
@@ -36,13 +40,13 @@ const Navbar = () => {
                             <PlusIcon className=" hover:cursor-pointer" />
                             <IoMdArrowDropdown className="mt-[5px] text-white" />
                         </label>
-                        User
+                        <div className="w-5 rounded-full bg-black border
+                        border-navbar-input-border-color h-full mt-[2px]">
+                        </div>
+                        <IoMdArrowDropdown className="mt-1 -mr-1 text-white" />
                     </div>
                 </div>
-
             </div>
-
-
         </>
     );
 }

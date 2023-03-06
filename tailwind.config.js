@@ -12,6 +12,8 @@ module.exports = {
         "navbar-input-bg-color": "#0d1117",
         "navbar-input-search-text-color": "#b5b2ae",
         "navbar-text-color": "#f0f6fc", 
+
+        "home-left-bg-color": "#0d1117"
       }
 
     },
